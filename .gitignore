@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /devenv
+/pcw
 
 # testing
 /coverage
