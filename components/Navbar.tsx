@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Search from './Search'
 
-function Navbar() {
+function Navbar( {hideSearch = false} ) {
   return (
     <header className=" mx-auto flex max-w-7xl items-center justify-between">
       <div className="flex items-center space-x-1 lg:space-x-7">
@@ -21,9 +21,17 @@ function Navbar() {
         </div>
 
         {/*Header Center -- Search*/}
-        <div className='hidden'>
+        {/* Option to hide the searcy  */}
+        {!hideSearch ? (
+          <div>
           <Search />
         </div>
+        ):(
+          <div className='hidden'>
+          <Search />
+        </div>
+        )}
+        
       </div>
 
       {/*Header Right*/}
@@ -32,7 +40,7 @@ function Navbar() {
         <Link href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7 cursor-pointer hover:fill-slate-300 transition duration-450 ease-in-out active:fill-slate-300"
+            className="h-7 w-7 cursor-pointer hover:fill-slate-300 fill-red-400  transition duration-450 ease-in-out active:fill-slate-300"
             viewBox="0 0 20 20"
             fill="currentColor"
             

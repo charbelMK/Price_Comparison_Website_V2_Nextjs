@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className=" min-h-screen bg-[url('https://www.indiumsoftware.com/wp-content/uploads/2018/04/5-ways-big-data-in-e-commerce.jpg')] bg-contain bg-no-repeat">
         {/* Navigation Bar */}
-        <Navbar />
+        <Navbar hideSearch/>
 
         {/* Body */}
         <div className="flex-inline max-w-2xl pl-10 pt-10 font-serif md:pl-24 lg:pl-40">
@@ -32,7 +32,7 @@ export default function Home() {
         <div className="flex space-x-2 pl-10 md:pl-24 lg:pl-40">
           <Search />
           <button
-            className="text-sm rounded-l-lg rounded-r-full bg-blue-400 px-4 text-white transition duration-500 ease-in-out
+            className="text-sm rounded-l-lg rounded-r-full bg-purple-700 px-4 text-white transition duration-500 ease-in-out
                       hover:bg-pink-400
                       hover:text-black"
                       data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search"
